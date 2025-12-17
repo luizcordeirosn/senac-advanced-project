@@ -1,28 +1,68 @@
-## Como executar o projeto
+# Word Brick (Raylib)
 
-### Pré-requisitos
+> Jogo desenvolvido em C utilizando a biblioteca [raylib](https://www.raylib.com/).
+
+---
+
+## Sumário
+
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Execução Local](#instalação-e-execução-local)
+- [Execução com Docker](#execução-com-docker)
+- [Observações](#observações)
+
+---
+
+## Pré-requisitos
+
 - **CMake** versão **3.27.7** (ou superior)
 - Compilador C compatível (ex: gcc)
+- Dependências da biblioteca [raylib](https://www.raylib.com/)
 
-### Passo a passo
-1. **Clone o repositório** (se ainda não fez):
-	```bash
-	git clone <url-do-repositorio>
-	cd ProjetoPI
-	```
+---
 
-2. **Compile o projeto** (na raiz do projeto):
-	```bash
-	make
-	```
-	Isso irá gerar o executável `game` na raiz do projeto.
+## Instalação e Execução Local
 
-3. **Execute o jogo**:
-	```bash
-	./game
-	```
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-repositorio>
+   cd ProjetoPI
+   ```
 
-### Observações
+2. **Compile o projeto (na raiz):**
+   ```bash
+   make
+   ```
+   O executável `game` será gerado na raiz do projeto.
+
+3. **Execute o jogo:**
+   ```bash
+   ./game
+   ```
+
+---
+
+## Execução com Docker
+
+1. **Construa a imagem Docker:**
+   ```bash
+   docker build -t word-brick-raylib .
+   ```
+
+2. **Execute o container com suporte a áudio e interface gráfica:**
+   ```bash
+   docker run --rm -it \
+      -e DISPLAY=$DISPLAY \
+      -v /tmp/.X11-unix:/tmp/.X11-unix \
+      -v /run/user/$(id -u)/pulse:/run/user/$(id -u)/pulse \
+      -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
+      word-brick-raylib
+   ```
+
+---
+
+## Observações
+
 - Certifique-se de que o CMake está instalado e na versão correta:
   ```bash
   cmake --version

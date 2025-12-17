@@ -13,7 +13,7 @@ void SetMenu(void) {
     
     int startX = (SCREEN_WIDTH - btnWidth) / 2;
     
-    int startY = ((SCREEN_HEIGHT - totalMenuHeight) / 2) + 100; 
+    int startY = ((SCREEN_HEIGHT - totalMenuHeight) / 2) + 200; 
 
     play = (Button) {{startX, startY, btnWidth, btnHeight}, "Jogar", RAYWHITE, BLACK};
     
