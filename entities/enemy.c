@@ -88,8 +88,8 @@ void DrawEnemies(EnemyList* enemy_list, Font myfont, Texture2D enemyTextures[]) 
 
     if (wave_clear == true) {
         if (wave_clear_timer >= 0) { 
-            DrawText(TextFormat("WAVE %d COMPLETA!", current_wave - 1), SCREEN_WIDTH/2 - 150, SCREEN_HEIGHT/2 - 30, 30, YELLOW);
-            DrawText(TextFormat("Próxima em %.1f", wave_clear_timer), SCREEN_WIDTH/2 - 150, SCREEN_HEIGHT/2 + 10, 20, YELLOW);
+            DrawText(TextFormat("WAVE %d COMPLETE!", current_wave - 1), SCREEN_WIDTH/2 - 150, SCREEN_HEIGHT/2 - 30, 30, YELLOW);
+            DrawText(TextFormat("Next wave in %.1f", wave_clear_timer), SCREEN_WIDTH/2 - 150, SCREEN_HEIGHT/2 + 10, 20, YELLOW);
             wave_clear_timer -= GetFrameTime();
         } else {
             wave_clear = false;

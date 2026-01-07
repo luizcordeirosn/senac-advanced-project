@@ -22,9 +22,9 @@ void SetSettings(void) {
     sound.rec  = (Rectangle) {rec.x, rec.y -  90, rec.width, rec.height};
     music.rec  = (Rectangle) {rec.x, rec.y +  60, rec.width, rec.height};
 
-    strcpy(config.text, "Configurações");  config.text_color = RAYWHITE;
-    strcpy(sound.text, "Som");             sound.text_color = RAYWHITE;
-    strcpy(music.text, "Música");          music.text_color = RAYWHITE;
+    strcpy(config.text, "Settings");  config.text_color = RAYWHITE;
+    strcpy(sound.text, "Sound");             sound.text_color = RAYWHITE;
+    strcpy(music.text, "Music");          music.text_color = RAYWHITE;
 
     sound_line = (Line) {line.x - line.size/2, line.y -  40, line.size, line.color};
     music_line = (Line) {line.x - line.size/2, line.y + 110, line.size, line.color};
@@ -48,9 +48,9 @@ void DrawSettings(void) {
     0.0f,
     WHITE);
 
-    DrawText(config.text, (SCREEN_WIDTH - 146*5)/2, config.rec.y + (config.rec.height - 100)/2, 100, config.text_color);
-    DrawText(sound.text,  (SCREEN_WIDTH - 18*5)/2, sound.rec.y + (sound.rec.height - font_size)/2, font_size, sound.text_color);
-    DrawText(music.text,  (SCREEN_WIDTH - 33*5)/2, music.rec.y + (music.rec.height - font_size)/2, font_size, music.text_color);
+    DrawText(config.text, (SCREEN_WIDTH - MeasureText(config.text, 100)) / 2, config.rec.y + (config.rec.height - 100) / 2, 100, config.text_color);
+    DrawText(sound.text, (SCREEN_WIDTH - MeasureText(sound.text, font_size))/2, sound.rec.y + (sound.rec.height - font_size)/2, font_size, sound.text_color);
+    DrawText(music.text, (SCREEN_WIDTH - MeasureText(music.text, font_size))/2, music.rec.y + (music.rec.height - font_size)/2, font_size, music.text_color);
     DrawText(back.text,   (SCREEN_WIDTH - 33*5)/2, back.rec.y  + (back.rec.height - font_size)/2, font_size, back.text_color);
     
     DrawLine(sound_line.x, sound_line.y, sound_line.x + sound_line.size, sound_line.y, sound_line.color);

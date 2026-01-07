@@ -15,13 +15,13 @@ void SetMenu(void) {
     
     int startY = ((SCREEN_HEIGHT - totalMenuHeight) / 2) + 200; 
 
-    play = (Button) {{startX, startY, btnWidth, btnHeight}, "Jogar", RAYWHITE, BLACK};
+    play = (Button) {{startX, startY, btnWidth, btnHeight}, "Play", RAYWHITE, BLACK};
     
-    sett = (Button) {{startX, startY + (btnHeight + padding), btnWidth, btnHeight}, "Configurações", RAYWHITE, BLACK};
+    sett = (Button) {{startX, startY + (btnHeight + padding), btnWidth, btnHeight}, "Settings", RAYWHITE, BLACK};
     
-    cred = (Button) {{startX, startY + (btnHeight + padding) * 2, btnWidth, btnHeight}, "Créditos", RAYWHITE, BLACK};
+    cred = (Button) {{startX, startY + (btnHeight + padding) * 2, btnWidth, btnHeight}, "Credits", RAYWHITE, BLACK};
     
-    quit = (Button) {{startX, startY + (btnHeight + padding) * 3, btnWidth, btnHeight}, "Sair", RAYWHITE, BLACK};
+    quit = (Button) {{startX, startY + (btnHeight + padding) * 3, btnWidth, btnHeight}, "Quit", RAYWHITE, BLACK};
 }
 
 void DrawMenu(void) {

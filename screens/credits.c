@@ -4,7 +4,7 @@
 Button credit, names;
 
 void SetCredits(void) {
-    credit = (Button) {{rec.x - 30, rec.y - 240, rec.width, rec.height}, "Créditos", BLACK, RAYWHITE};
+    credit = (Button) {{rec.x - 30, rec.y - 240, rec.width, rec.height}, "Credits", BLACK, RAYWHITE};
     names = (Button) {{rec.x - 300, rec.y - 100, 400, 400}, "Thiago Tenório\nLuiz Cordeiro\nCaio Tenório\nPedro Moraes", BLACK, RAYWHITE};
 }
 

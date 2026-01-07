@@ -4,9 +4,9 @@
 Button pause, resume, settings;
 
 void SetPause(void) {
-    pause =     (Button) {{rec.x - 30, rec.y - 240, rec.width, rec.height}, "Pausado",  BLACK, RAYWHITE};
-    resume =    (Button) {{rec.x, rec.y,       rec.width, rec.height}, "Continuar",     RAYWHITE, BLACK};
-    settings =  (Button) {{rec.x, rec.y + 110, rec.width, rec.height}, "Configurações", RAYWHITE, BLACK};
+    pause =     (Button) {{rec.x - 30, rec.y - 240, rec.width, rec.height}, "Paused",  BLACK, RAYWHITE};
+    resume =    (Button) {{rec.x, rec.y,       rec.width, rec.height}, "Resume",     RAYWHITE, BLACK};
+    settings =  (Button) {{rec.x, rec.y + 110, rec.width, rec.height}, "Settings", RAYWHITE, BLACK};
 }
 
 void DrawPause(void) {

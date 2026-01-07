@@ -5,7 +5,7 @@ Button game_over, restart;
 
 void SetGameOver(void) {
     game_over = (Button) {{rec.x - 30, rec.y - 240, rec.width, rec.height}, "Game Over", BLACK, RED};
-    restart =   (Button) {{rec.x, rec.y + 60, rec.width, rec.height},   "Reiniciar", RAYWHITE, BLACK};
+    restart =   (Button) {{rec.x, rec.y + 60, rec.width, rec.height},   "Restart", RAYWHITE, BLACK};
 }
 
 void DrawGameOver(void) {

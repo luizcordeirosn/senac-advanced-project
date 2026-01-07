@@ -1,7 +1,7 @@
 #include "raylib.h"
 #include "game.h"
 
-char text[500] = "Os invasores galácticos, em sua grande \"sabedoria\", decidiram usar palavras aleatórias como escudo para suas naves. Mas o astuto guerreiro do CIn, o mais rápido digitador da galáxia, está pronto para detê-los! Com dedos mais rápidos que lasers e uma destreza inumana no teclado, ele defende a Terra da ameaça mais absurda do universo: um combate de digitação intergaláctico!";
+char text[600] = "The galactic invaders, in their great \"wisdom,\" decided to use random words as shields for their ships. But the cunning warrior from Senac, the fastest typist in the galaxy, is ready to stop them! With fingers faster than lasers and inhuman keyboard dexterity, he defends Earth from the most absurd threat in the universe: an intergalactic typing combat!";
 int pos_x = 1280;
 int scroll_speed = 350.0f;
 
@@ -11,7 +11,7 @@ void DrawHistory(Texture2D background, Font myfont) {
     DrawRectangle(0, (720/2 - 50), 1280, 100, WHITE);
     DrawTextEx(GetFontDefault(), text, (Vector2) {pos_x, (720/2 - 10)}, 30, 5, BLACK);
 
-    DrawTextEx(GetFontDefault(), "Aperte ENTER para pular...", (Vector2) {50, (720/2 + 70)}, 30, 5, WHITE);
+    DrawTextEx(GetFontDefault(), "Press ENTER to skip...", (Vector2) {50, (720/2 + 70)}, 30, 5, WHITE);
 }
 
 void UpdateHistory() {

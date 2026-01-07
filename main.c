@@ -54,7 +54,7 @@ Rectangle rec = {(SCREEN_WIDTH - 400)/2, (SCREEN_HEIGHT - 80)/2, 400, 80};
 /** @brief Botão 'Voltar' usado em várias telas. */
 Button back = {
     {(SCREEN_WIDTH - 33*5)/2, SCREEN_HEIGHT/2 + 250, 33*5, 50}, 
-    "Voltar", 
+    "Back", 
     BLACK, 
     RAYWHITE
 };

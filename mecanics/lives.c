@@ -44,7 +44,7 @@ void DrawLives(Player* player) {
     }
     
     // Desenha texto com número de vidas
-    DrawText(TextFormat("VIDAS: %d", player->lives), SCREEN_WIDTH - 150, 20, 30, WHITE);
+    DrawText(TextFormat("LIVES: %d", player->lives), SCREEN_WIDTH - 150, 20, 30, WHITE);
 }
 
 // Reinicia o jogo após Game Over
